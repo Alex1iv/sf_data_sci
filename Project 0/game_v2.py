@@ -19,19 +19,15 @@ def random_predict(number:int=1) -> int:
         #predict_number = np.random.randint(1, 101)  # предполагаемое число
         #if number == predict_number:
             #break  # выход из цикла если угадали
-        predict_number = 50
-        i = 25
         if predict_number > number:
-            count += 1
-            predict_number += i
-            i = round(i*0.5)
-            #print(i) 
+            predict_number -= 10
+            print(predict_number)
+             
         elif predict_number < number:
-            count += 1
-            i = round(i*0.5)
-            predict_number -= i
+            predict_number += 1
+            print(predict_number)
         elif number == predict_number:
-            break  # выход из цикла если угадали
+          break  # выход из цикла если угадали
     return count
 
 #print(f'Количество попыток: {random_predict(10)}')
