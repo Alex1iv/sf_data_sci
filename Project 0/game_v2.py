@@ -12,29 +12,29 @@ def random_predict(number:int=1) -> int:
         int: Число попыток
     """
 
-    count = 0
-
+    count = 0  # initially counter value =0 (начальное значение счётчика)
+    predict_number = 50  # initial prediction (начальное значение угадываемого числа)
+    interval = 50  # prediction step (шаг изменения угадываемого числа)
+    
     while True:
-        count += 1
-        #predict_number = np.random.randint(1, 101)  # предполагаемое число
-        #if number == predict_number:
-            #break  # выход из цикла если угадали
+        count += 1  # count attempts (считаем каждую попытку)
+        interval = round(interval*0.5)  # reducing the step (уменьшаем шаг изменения угадываемого числа)
+        
         if predict_number > number:
-            predict_number -= 10
-            print(predict_number)
-             
+            predict_number -= interval  # decreasing our prediction (уменьшаем угадываемое число на шаг)
+                    
         elif predict_number < number:
-            predict_number += 1
-            print(predict_number)
+            predict_number += interval  # increasing our prediction (увеличиваем угадываемое число на шаг)
+            
         elif number == predict_number:
-          break  # выход из цикла если угадали
-    return count
+            break  # выход из цикла если угадали
 
-#print(f'Количество попыток: {random_predict(10)}')
+    return count # return the number of attempts (возвращаем номер успешной попытки)
+
 
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
-
+ 
     Args:
         random_predict ([type]): функция угадывания
 
@@ -44,15 +44,15 @@ def score_game(random_predict) -> int:
 
     count_ls = [] # список для сохранения количества попыток
     np.random.seed(1) # фиксируем сид для воспроизводимости
-    random_array = np.random.randint(1, 101, size=(1000)) # загадали список чисел
+    random_array = np.random.randint(1, 101, size=(100)) # загадали список чисел
 
     for number in random_array:
-        count_ls.append(random_predict(number))
+        count_ls.append(random_predict(number))  # добавляем счётчик успешнх попыток в журнал
 
     score = int(np.mean(count_ls)) # находим среднее количество попыток
 
-    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
-    return(score)
+    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток') 
+    return(score) 
 
 # RUN
 if __name__ == '__main__':
