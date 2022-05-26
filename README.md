@@ -16,4 +16,4 @@ Predicts a guessed number using as few as possible attempts.
 
 **Conditions**
 - The computer generates random integer number in a range from 0 to 100. 
-- The number prediction algorythm makes a random guess. The algorithm also counts the number of attempts, and returns the average number of successful guesses after 1000 passes.
+- The number prediction algorythm starts guessing from 50 and gradually changes its prediction. The algorithm also counts the number of attempts, and returns the average number of successful guesses after 1000 passes.
