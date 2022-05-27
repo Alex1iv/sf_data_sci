@@ -12,7 +12,7 @@ course: data science from the Skillfactory
 * [CV] 
 
 ### Project description
-Predicts a guessed number using as few as possible attempts.
+Predicts a guessed number using as few as possible attempts. In average, the algorithm predicats the number after 6 attempts.
 
 **Conditions**
 - The computer generates random integer number in a range from 0 to 100. 
