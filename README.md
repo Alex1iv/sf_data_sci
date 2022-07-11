@@ -28,7 +28,7 @@ It was analized the client outflow from a certain bank. The dataset is available
 - Fig.4 - hone clients by age groups;
 - Fig.5 - customers by credit score and estimated salary;
 - Fig.6 - gone clients by gender;
-- Fig.7 - gone clients by the number of products;
+- Fig.7 - gone clients by the number of bank products and credit card usage;
 - Fig.8 - customers by the 'active client' status;
 - Fig.9 - gone clients by country;
 - Fig.10 - gone clients by credit rating groups and years of tenure in the bank.
