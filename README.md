@@ -5,7 +5,7 @@ course: data science from the Skillfactory
 ## Projects
 
 * [Project 0. Number guessing game] (https://github.com/Alex1iv/sf_data_sci/tree/main/Project%200)
-* [Project 1. ] (https://github.com/Alex1iv/sf_data_sci/blob/main/Project_1/Bank_clients.ipynb) 
+* [Project 1. Bank customers outflow] (https://github.com/Alex1iv/sf_data_sci/blob/main/Project_1/Bank_clients.ipynb) 
 * [Project 2. ] 
 
 ## Cv link
